@@ -43,17 +43,6 @@ export default function Tweet({ date, ast }) {
 
       <main>
         {isFallback ? <TweetSkeleton /> : <Node components={components} node={ast[0]} />}
-
-        <footer>
-          <p>
-            {isFallback
-              ? '🤯 This tweet is statically generating.'
-              : '🤯 This tweet was statically generated.'}{' '}
-            <Link href="/" passHref>
-              <A blank={false}>See how</A>
-            </Link>
-          </p>
-        </footer>
       </main>
 
       <style jsx>{`
