@@ -6,7 +6,7 @@ export default function TweetHeader({ tweet }) {
 
   return (
     <div className="tweet-header">
-      <a href={url} className="avatar" target="_blank" rel="noopener noreferrer">
+      <a href={url} className="tweet-avatar" target="_blank" rel="noopener noreferrer">
         <Image src={avatar} alt={tweet.name} width={36} height={36} />
       </a>
       <a href={url} className="author" target="_blank" rel="noopener noreferrer">

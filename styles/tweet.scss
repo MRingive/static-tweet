@@ -104,12 +104,12 @@
     display: flex;
   
   
-  .avatar {
+  .tweet-avatar {
     height: 36px;
     width: 36px;
     margin-right: 0.625rem;
   }
-  .avatar > div {
+  .tweet-avatar > div {
     border: var(--tweet-avatar-border);
     border-radius: 50%;
   }
