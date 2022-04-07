@@ -41,9 +41,9 @@ export default function Tweet({ date, ast }) {
     <div className={`page-wrapper ${styles.theme}`}>
       <TweetMeta />
 
-      <main>
-        {isFallback ? <TweetSkeleton /> : <Node components={components} node={ast[0]} />}
-      </main>
+      <div className='tweet-wrapper'>
+      {isFallback ? <TweetSkeleton /> : <Node components={components} node={ast[0]} />}
+      </div>
 
       <style jsx>{`
         .page-wrapper {
@@ -53,16 +53,7 @@ export default function Tweet({ date, ast }) {
           overflow: auto;
           padding: 2rem 1rem;
         }
-        main {
-          width: 500px;
-          max-width: 100%;
-          margin: 0 auto;
-        }
-        footer {
-          font-size: 0.875rem;
-          text-align: center;
-          margin-top: -0.5rem;
-        }
+        
       `}</style>
     </div>
   );

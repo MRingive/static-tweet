@@ -4,23 +4,12 @@ import formatDistanceStrict from 'date-fns/formatDistanceStrict';
 import s from './twitter.module.css';
 
 export const TwitterLink = p => (
-  <a href={p.href} target="_blank" rel="noopener noreferrer" title={p.title || p.href}>
+  <span className='twitter-link'>
+    <a href={p.href} target="_blank" rel="noopener noreferrer" title={p.title || p.href}>
     <s>{p.type}</s>
     <b>{p.children}</b>
-
-    <style jsx>{`
-      a {
-        color: #22bad9;
-        text-decoration: none;
-      }
-      a:hover > b {
-        text-decoration: underline;
-      }
-      s {
-        text-decoration: none;
-      }
-    `}</style>
   </a>
+  </span>
 );
 
 export const Mention = p => (
